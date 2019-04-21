@@ -5,11 +5,8 @@ export class Application {
   data = {};
   async init() {
     const values = await Prompts.getValues();
-    if (values.action === 'encrypt') {
-      this.data = values;
-    } else if (values.action === 'decrypt') {
-      this.data = values;
-    }
+    this.data = values;
+
   }
 
   encode() {
